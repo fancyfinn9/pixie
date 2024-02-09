@@ -26,6 +26,7 @@ Please note that if it is the first time someone on the instance uses any given 
 
 ### Admin's guide
 1. Make sure Python 3 is installed on your machine. Test it by running `python3 --version` in the command line.
-2. Clone **the entire repository** into a folder in a place where you can access the Mastodon CLI. Test it by going into the folder in the command line and running `tootctl --version`.
-3. Run pixie-tests.py with `python3 pixie-tests.py` to check everything works properly.
-4.
+2. Clone the  repository into a folder where you can access the Mastodon CLI. Test it by going into the folder in the command line and running `tootctl --version`.
+3. Create a folder named **downloaded_images** in the same directory as the repository.
+4. Run pixie-tests.py with `python3 pixie-tests.py` to check everything works properly.
+5.
