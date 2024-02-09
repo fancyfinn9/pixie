@@ -11,7 +11,7 @@ print("Use custom emojis from any other Mastodon instance!")
 
 # Test Mastodon CLI
 print("\n[1/4] Testing Mastodon CLI...")
-#subprocess.run(["tootctl", "--version"])
+subprocess.run(["tootctl", "--version"])
 success = input("Did you a version number appear? [Y/n] ").lower()
 if success == "y":
     print("Test 1/4 completed")
