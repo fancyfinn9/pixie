@@ -30,3 +30,9 @@ Please note that if it is the first time someone on the instance uses any given 
 3. Create a folder named **downloaded_images** in the same directory, for example at `/repository/downloaded_images`.
 4. Run pixie-tests.py with `python3 pixie-tests.py` to check everything works properly.
 5.
+
+---
+#### Credits:
+
+All code by [fancyfinn9](https://donphan.social/@fancyfinn9)
+Fairy wand icon by [Lorc](https://lorcblog.blogspot.com/)
