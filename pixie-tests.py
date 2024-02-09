@@ -11,7 +11,11 @@ print("Use custom emojis from any other Mastodon instance!")
 
 # Test Mastodon CLI
 print("\n[1/4] Testing Mastodon CLI...")
+
+# Run tootctl --version
 subprocess.run(["tootctl", "--version"])
+
+# Confirmation
 success = input("Did you a version number appear? [Y/n] ").lower()
 if success == "y":
     print("Test 1/4 completed")
@@ -21,7 +25,11 @@ else:
 
 # Test internet access and image downloading
 print("\n[2/4] Testing internet access...")
+
+# Download test image
 urllib.request.urlretrieve("https://pool.jortage.com/donphansocial/custom_emojis/images/000/044/619/static/masto_ball.png", "downloaded_images/masto_ball@donphan.social.png")
+
+# Confirmation
 success = input("Check the \"downloaded_images\" directory. Is there a file called \"masto_ball@donphan.social.png\"? [Y/n] ").lower()
 if success == "y":
     print("Test 2/4 completed")
@@ -35,13 +43,14 @@ print("\n[3/4] Testing .tar.gz compression...")
 # Open the .tar.gz file
 with tarfile.open("emojos.tar.gz", "w:gz") as tar:
     
-    # Add each file individually
+    # Add file to archive
     for file in ["downloaded_images/masto_ball@donphan.social.png"]:
         tar.add(file)
         
     # Save the .tar.gz file
     tar.close()
 
+# Confirmation
 success = input("Is there an archive called \"emojos.tar.gz\" in the same directory as this script? It should contain \"masto_ball@donphan.social.png\" [Y/n] ").lower()
 if success == "y":
     print("Test 3/4 completed")
@@ -51,7 +60,12 @@ else:
     
 # Test adding emojis to instance
 print("\n[4/4] Testing adding emoji to instance...")
+
+# Run tootctl emoji import emojos.tar.gz --unlisted
+# This adds the emojis in emojos.tar.gz to the instance but they don't show up in the emoji picker
 subprocess.run(["tootctl", "emoji", "import", "emojos.tar.gz", "--unlisted"])
+
+# Confirmation
 success = input("Start writing a Mastodon post and try use the emoji :masto_ball@donphan.social:. Does it work? [Y/n] ").lower()
 if success == "y":
     print("Test 4/4 completed")
@@ -59,4 +73,5 @@ else:
     print("\n[!] Whoops! For some reason the emoji didn't import. Try again in a few minutes.")
     Error()
 
+# Finished!
 print("\nEverything works perfectly, PIXIE will work on this machine.")
