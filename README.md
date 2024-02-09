@@ -3,7 +3,7 @@ Python Interface for Cross-Instance Emojos
 
 <img src="pixie-sticker.png" alt="PIXIE - Python Interface for Cross-Instance Emojos" width="200"/>
 
-With PIXIE you can now use custom emojis from other Mastodon instances! No more restrictions to the emojis your instance has!
+Sprinkle a little bit of magic on your Mastodon instance! With PIXIE you can now use custom emojis from other Mastodon instances!
 
 ---
 
@@ -31,7 +31,15 @@ Please note that if it is the first time someone on the instance uses any given 
 2. Clone the repository into a folder where you can access the Mastodon CLI. Test it by going into the folder in the command line and running `tootctl --version`.
 3. Create a folder named **downloaded_images** in the same directory, for example at `/repository/downloaded_images`.
 4. Run pixie-tests.py with `python3 pixie-tests.py` to check everything works properly.
-5.
+5. Open pixie-main.py and edit the variables at the top of the file. Change donphan.social to your instance's web address (*without* https:// or www.), and change 5 to how frequently your cronjob will run pixie-main.py
+6. You can now create a cronjob in whatever way you like to run pixie-main.py every amount of minutes that you specified in the previous step. You may change the interval at any time, but make sure to edit the variable in pixie-main.py
+7. Tell your users that you're using PIXIE! If you want to support us please include the following HTML in your instance's description:
+
+``
+<a href="https://github.com/fancyfinn9/pixie" target="_blank">
+<img src="https://raw.githubusercontent.com/fancyfinn9/pixie/main/pixie-sticker.png" alt="This instance uses PIXIE, Python Interface for Cross-Instance Emojos" width="200">
+</a>
+``
 
 ---
 #### Credits:
