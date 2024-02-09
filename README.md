@@ -35,4 +35,5 @@ Please note that if it is the first time someone on the instance uses any given 
 #### Credits:
 
 All code by [fancyfinn9](https://donphan.social/@fancyfinn9)
+
 Fairy wand icon by [Lorc](https://lorcblog.blogspot.com/)
