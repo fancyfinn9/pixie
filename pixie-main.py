@@ -12,6 +12,7 @@ import json                     # Used for parsing JSON from API
 from pathlib import Path        # Used for accessing files in downloaded_images/
 import re                       # Used for searching posts for any custom emoji references
 import datetime                 # Used for checking current time and when posts were published
+import os                       # Used for basic file handling when deleting contents of downloaded_images/
 
 def log(text):
     logtxt = "["+datetime.datetime.now().isoformat()+"] "+text
@@ -22,6 +23,12 @@ def log(text):
         
 log("======== NEW RUN ========")
 log("PIXIE started. Running on "+instance_url)
+
+log("Clearing emojis from last run")
+# Delete current contents of downloaded_images/
+for file in os.listdir("downloaded_images"):
+    os.remove("downloaded_images/"+file)
+    log("Cleared "+file)
 
 # For later
 filenames = []
