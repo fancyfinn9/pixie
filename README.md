@@ -1,6 +1,8 @@
 # PIXIE for Mastodon
 Python Interface for Cross-Instance Emojos
 
+<img src="pixie-sticker.png" alt="PIXIE - Python Interface for Cross-Instance Emojos" width="200"/>
+
 With PIXIE you can now use custom emojis from other Mastodon instances! No more restrictions to the emojis your instance has!
 
 ---
