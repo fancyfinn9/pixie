@@ -7,7 +7,7 @@ With PIXIE you can now use custom emojis from other Mastodon instances! No more 
 
 ### User's guide
 1. Make sure your server has PIXIE. If it doesn't, ask the instance owner to add it.
-2. Find a custom emoji (emojo) you would like to use, and use the emoji in the `:emoji_name@instance.example:` format. For example, `:squirtle@donphan.social:`. If the emoji doesn't appear in your draft, don't worry. Just make sure the syntax is correct and everything will work.
+2. Find a custom emoji (emojo) you would like to use, and use the emoji in the `:emoji_name@instance.example:` format. For example, `:squirtle@donphan.social:`. If the emoji doesn't appear in your draft, don't worry. Just make sure the syntax is correct and everything will work. (If you want to search for custom emojis check out https://emojos.in)
 3. Publish your post!
 
 Please note that if it is the first time someone on the instance uses any given emoji, it may take a couple of minutes for the emoji to display.
